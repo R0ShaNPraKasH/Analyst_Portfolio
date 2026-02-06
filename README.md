@@ -10,5 +10,11 @@ Welcome to my portfolio! Here you will find my projects showcasing data analysis
 * **Key Insight:** Identified a "Paycheck Effect" where sales surge 2.7% at the start of the month.
 * [View Project Files](./Walmart_Sales_Analysis)
 
+### 2. Elite Bank Management System (Full Stack Development)
+* **Goal:** Build a fail-safe banking ledger that handles concurrent transactions and liquidity risks.
+* **Tech:** Python (Django), MySQL, Bootstrap.
+* **Key Insight:** Implemented **Atomic Transactions** to prevent data corruption during transfers and a **Dynamic Credit Logic** that adjusts user tiers in real-time.
+* [View Project Files](./Banking_Project)
 ---
 *More projects coming soon...*
+
