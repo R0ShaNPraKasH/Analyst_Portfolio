@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}  {% block content %}
+<div class="container text-center mt-5">
+    <div class="p-5 mb-4 bg-light rounded-3 shadow-sm border">
+        <h1 class="display-4 fw-bold text-primary">Welcome to Bank of Thiruvananthapuram</h1>
+        <p class="col-md-8 fs-4 mx-auto text-muted">
+            Experience next-generation banking. Secure, fast, and designed for your financial growth.
+        </p>
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+            {% if user.is_authenticated %}
+                <a href="{% url 'dashboard' %}" class="btn btn-primary btn-lg px-4 gap-3">
+                    Go to Dashboard
+                </a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg px-4 gap-3">
+                    Login
+                </a>
+                <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-lg px-4">
+                    Open New Account
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row align-items-md-stretch mt-5">
+        <div class="col-md-4">
+            <div class="h-100 p-4 text-white bg-dark rounded-3 shadow">
+                <h2>Secure Vault</h2>
+                <p>Your money is protected by our advanced 256-bit liquidity tracking system.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="h-100 p-4 bg-light border rounded-3 shadow-sm">
+                <h2>VIP Lounge</h2>
+                <p>Maintain a balance of ₹50,000+ and get exclusive access to airport lounges worldwide.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="h-100 p-4 text-white bg-success rounded-3 shadow">
+                <h2>Instant Loans</h2>
+                <p>Need funds? Apply for a loan instantly based on your net worth and credit score.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5"> <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-4">
+                        <img src="{% static 'images/owner.jpeg' %}" class="img-fluid rounded-start" alt="Owner Photo" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body text-start">
+                            <h3 class="card-title text-primary">Meet the Founder</h3>
+                            <h5 class="text-muted">Roshan Prakash</h5>
+                            <p class="card-text mt-3">
+                                "I founded Bank of Thiruvananthapuram with a vision to revolutionize digital banking for the peple of BSASS. 
+                                My goal is to create secure, user-friendly financial systems that prioritize customer growth 
+                                and data integrity. Thank you for banking with us."
+                            </p>
+                            <p class="card-text"><small class="text-muted">Founder & CEO, Bank of Thiruvananthapuram</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

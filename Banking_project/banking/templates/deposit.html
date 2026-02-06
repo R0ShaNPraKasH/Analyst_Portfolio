@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h4>Deposit Money</h4>
+            </div>
+            <div class="card-body">
+                <p>Current Balance: <strong>₹{{ user.customer.balance }}</strong></p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-success w-100">Confirm Deposit</button>
+                </form>
+                <br>
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary w-100">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
