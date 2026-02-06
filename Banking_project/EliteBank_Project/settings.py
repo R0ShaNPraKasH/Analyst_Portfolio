@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'elitebank_db',  # You must create this empty DB in MySQL first
         'USER': 'root',          # Default XAMPP user
-        'PASSWORD': 'rosh#2408',          # Default XAMPP password is empty
+        'PASSWORD': '',          # ADD your password here
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -127,4 +127,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = 'dashboard'
+
 LOGOUT_REDIRECT_URL = 'login'
